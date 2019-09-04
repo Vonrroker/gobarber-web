@@ -1,8 +1,10 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
 
+import 'react-perfect-scrollbar/dist/css/styles.css';
 import './config/ReactotronConfig';
 
 import history from './services/history';
@@ -19,6 +21,7 @@ function App() {
         <Router history={history}>
           <Routes />
           <GlobalStyle />
+          <ToastContainer autoClose={3000} />
         </Router>
       </PersistGate>
     </Provider>
